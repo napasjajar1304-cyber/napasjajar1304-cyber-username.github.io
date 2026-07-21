@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำควบกล้ำแสนสนุก ป.3 - เรียนรู้เชิงรุก (Active Learning)</title>
+    <meta name="description" content="สื่อการสอนเรื่องคำควบกล้ำสำหรับนักเรียนชั้นประถมศึกษาปีที่ 3 เรียนรู้แบบ Active Learning สนุกกับเกมนานาชนิดและรับเกียรติบัตร">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Clouds and Bubbles -->
+    <div class="sky-background">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="logo-emoji">🇹🇭</span>
+            <span class="logo-text">คำควบกล้ำ<span class="highlight">แสนสนุก</span></span>
+        </div>
+        <div class="nav-menu">
+            <button class="nav-btn active" onclick="switchScreen('home-screen')">🏠 หน้าแรก</button>
+            <button class="nav-btn" onclick="switchScreen('learn-screen')">📚 บทเรียน</button>
+            <button class="nav-btn" onclick="switchScreen('game1-screen')">🛒 จ่ายตลาด</button>
+            <button class="nav-btn" onclick="switchScreen('game2-screen')">📖 ล่านิทาน</button>
+            <button class="nav-btn" onclick="switchScreen('exit-screen')">🏆 เกียรติบัตร</button>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="main-container">
+
+        <!-- SCREEN 1: HOME SCREEN -->
+        <section id="home-screen" class="screen active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <span class="tag">🛒 ตลาดสดจำลองแสนสนุก ป.3</span>
+                    <h1>ยินดีต้อนรับสู่ตลาดสด<br><span class="gradient-text">คำควบกล้ำพาเพลิน!</span></h1>
+                    <p>มาร่วมสวมบทบาทเป็น "ผู้ช่วยพ่อค้าแม่ค้า" ไปกับเพื่อนรักไดโนเสาร์ "น้องพร้อม" เรียนรู้วิธีจำแนกคำควบกล้ำแท้และไม่แท้ผ่านแผงร้านค้าต่าง ๆ ในตลาดสดจำลอง ช่วยจัดเรียงสินค้า และรับใบประกาศเกียรติคุณสุดภูมิใจกันเถอะ!</p>
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-bounce" onclick="switchScreen('learn-screen')">
+                            เริ่มเที่ยวตลาดสด 🚀
+                        </button>
+                        <button class="btn btn-secondary" onclick="switchScreen('game1-screen')">
+                            ช่วยจัดเรียงสินค้า 🛒
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <img src="assets/mascot.jpg" alt="น้องพร้อม มาสคอตไดโนเสาร์ 3 มิติ" class="mascot-3d-img">
+                    <div class="speech-bubble">
+                        สวัสดีครับ! ยินดีต้อนรับสู่ตลาดคำควบกล้ำครับ วันนี้มาช่วยผมอุดหนุนป้าสมศรีกับลุงสมหมายและทำภารกิจกันนะ! 🦖🥬🍎
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Cards -->
+            <div class="features-grid">
+                <div class="feature-card" onclick="switchScreen('learn-screen')">
+                    <div class="feature-icon">📚</div>
+                    <h3>แผงบทเรียนควบกล้ำ</h3>
+                    <p>เรียนรู้เรื่องคำควบกล้ำที่แผงผักป้าสมศรี และแผงผลไม้ลุงสมหมาย พร้อมระบบกดฟังเสียงสะกดคำ</p>
+                </div>
+                <div class="feature-card" onclick="switchScreen('game1-screen')">
+                    <div class="feature-icon">🛒</div>
+                    <h3>เกมช่วยจัดแผงสินค้า</h3>
+                    <p>ช่วยลุงชัยแยกแยะผักผลไม้คำควบกล้ำใส่ตะกร้าให้ตรงตามใบสั่งซื้อของลูกค้า</p>
+                </div>
+                <div class="feature-card" onclick="switchScreen('game2-screen')">
+                    <div class="feature-icon">📖</div>
+                    <h3>นิทานแผงยายประณีต</h3>
+                    <p>สืบคดีตามหาคำควบกล้ำที่ซ่อนอยู่ในเรื่องเล่าตลก ๆ ประจำตลาดสดของคุณยายประณีต</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: LEARNING SCREEN -->
+        <section id="learn-screen" class="screen">
+            <div class="screen-header">
+                <h2>📚 แผงการเรียนรู้คำควบกล้ำในตลาดสด</h2>
+                <p>กดที่ปุ่มลำโพง 🔊 เพื่อฟังเสียงพ่อค้าแม่ค้าสะกดคำและอธิบายให้ฟังนะเด็ก ๆ</p>
+            </div>
+
+            <div class="lessons-container">
+                <!-- True Consonant Clusters Card -->
+                <div class="lesson-card true-clusters">
+                    <div class="card-badge">🥬 แผงผักสดป้าสมศรี</div>
+                    <h3>คำควบกล้ำแท้ 🌟</h3>
+                    <p class="description">คือ สินค้าแผงผักที่มีตัวสะกดควบกล้ำกับ **ร, ล, ว** และเวลาออกเสียงจะต้องออกเสียงพยัญชนะต้นทั้งสองตัวพร้อมกันให้ชัดเจน</p>
+                    
+                    <div class="words-grid">
+                        <div class="word-item" onclick="speakWord('กวาง')">
+                            <span class="word-text"><span class="highlight-cluster">กว</span>าง</span>
+                            <span class="word-desc">ก-ว-า-ง (ควบ กว)</span>
+                            <button class="speak-btn">🔊</button>
+                        </div>
+                        <div class="word-item" onclick="speakWord('พริก')">
+                            <span class="word-text"><span class="highlight-cluster">พร</span>ิก</span>
+                            <span class="word-desc">พ-ร-ิ-ก (ควบ พร)</span>
+                            <button class="speak-btn">🔊</button>
+                        </div>
+                        <div class="word-item" onclick="speakWord('กล้วย')">
+                            <span class="word-text"><span class="highlight-cluster">กล</span>้วย</span>
+                            <span class="word-desc">ก-ล-ว-ย-โท (ควบ กล)</span>
+                            <button class="speak-btn">🔊</button>
+                        </div>
+                        <div class="word-item" onclick="speakWord('ขลุ่ย')">
+                            <span class="word-text"><span class="highlight-cluster">ขล</span>ุ่ย</span>
+                            <span class="word-desc">ข-ล-ุ-ย-เอก (ควบ ขล)</span>
+                            <button class="speak-btn">🔊</button>
+                        </div>
+                        <div class="word-item" onclick="speakWord('ตรวจ')">
+                            <span class="word-text"><span class="highlight-cluster">ตร</span>วจ</span>
+                            <span class="word-desc">ต-ร-ว-จ (ควบ ตร)</span>
+                            <button class="speak-btn">🔊</button>
+                        </div>
+                        <div class="word-item" onclick="speakWord('กวาด')">
+                            <span class="word-text"><span class="highlight-cluster">กว</span>าด</span>
+                            <span class="word-desc">ก-ว-า-ด (ควบ กว)</span>
+                            <button class="speak-btn">🔊</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- False Consonant Clusters Card -->
+                <div class="lesson-card false-clusters">
+                    <div class="card-badge orange">🍎 แผงผลไม้ลุงสมหมาย</div>
+                    <h3>คำควบกล้ำไม่แท้ 🍂</h3>
+                    <p class="description">คือ สินค้าแผงผลไม้ที่เขียนตัวหลังสะกดด้วย **ร** แต่เวลาพ่อค้าแม่ออกเสียง จะออกเสียงเฉพาะตัวหน้า หรือออกเสียงเปลี่ยนไปเป็นเสียง ซอ โซ่</p>
+                    
+                    <div class="sub-lesson">
+                        <h4>1. ออกเสียงเฉพาะพยัญชนะต้นตัวแรก (ไม่ออกเสียง ร)</h4>
+                        <div class="words-grid">
+                            <div class="word-item" onclick="speakWord('จริง')">
+                                <span class="word-text"><span class="highlight-cluster">จร</span>ิง</span>
+                                <span class="word-desc">ออกเสียง "จิง"</span>
+                                <button class="speak-btn">🔊</button>
+                            </div>
+                            <div class="word-item" onclick="speakWord('สร้าง')">
+                                <span class="word-text"><span class="highlight-cluster">สร</span>้าง</span>
+                                <span class="word-desc">ออกเสียง "สร้าง"</span>
+                                <button class="speak-btn">🔊</button>
+                            </div>
+                            <div class="word-item" onclick="speakWord('สร้อย')">
+                                <span class="word-text"><span class="highlight-cluster">สร</span>้อย</span>
+                                <span class="word-desc">ออกเสียง "ส้อย"</span>
+                                <button class="speak-btn">🔊</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sub-lesson">
+                        <h4>2. ทร ควบกัน แล้วลุงสมหมายออกเสียงเป็น "ซ"</h4>
+                        <div class="words-grid">
+                            <div class="word-item" onclick="speakWord('ทราย')">
+                                <span class="word-text"><span class="highlight-cluster">ทร</span>าย</span>
+                                <span class="word-desc">ออกเสียง "ซาย"</span>
+                                <button class="speak-btn">🔊</button>
+                            </div>
+                            <div class="word-item" onclick="speakWord('ทราบ')">
+                                <span class="word-text"><span class="highlight-cluster">ทร</span>าบ</span>
+                                <span class="word-desc">ออกเสียง "ซาบ"</span>
+                                <button class="speak-btn">🔊</button>
+                            </div>
+                            <div class="word-item" onclick="speakWord('ทรุดโทรม')">
+                                <span class="word-text"><span class="highlight-cluster">ทร</span>ุด<span class="highlight-cluster">ทร</span>อม</span>
+                                <span class="word-desc">ออกเสียง "ซุด-โซม"</span>
+                                <button class="speak-btn">🔊</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-action">
+                <button class="btn btn-primary" onclick="switchScreen('game1-screen')">ไปที่แผงลุงชัย ช่วยจัดตะกร้าสินค้าต่อเลย 🛒</button>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: GAME 1 SCREEN (SHOPPING GAME) -->
+        <section id="game1-screen" class="screen">
+            <div class="screen-header">
+                <h2>🛒 ด่านที่ 1: ช่วยลุงชัยจัดแผงจ่ายตลาด</h2>
+                <p>ลากสินค้าจากตู้แช่ไปใส่ตะกร้าแผงผักป้าสมศรี และแผงผลไม้ลุงสมหมายให้ถูกต้องตามเงื่อนไขส่งของ!</p>
+                <div class="score-board">
+                    <div class="score-box">คะแนน: <span id="game1-score" class="score-num">0</span> คะแนน</div>
+                    <div class="progress-box">จัดส่งสินค้าแล้ว: <span id="game1-progress">0/8</span> ชิ้น</div>
+                </div>
+            </div>
+
+            <div class="game1-layout">
+                <!-- Shelves of Products -->
+                <div class="shelf-container">
+                    <div class="shelf-title">🥬 ตู้เก็บสินค้าสดในตลาด (ลากหรือจิ้มคัดเลือกร้านจัดส่ง)</div>
+                    <div id="products-shelf" class="products-shelf">
+                        <!-- Products will be generated dynamically by JS -->
+                    </div>
+                </div>
+
+                <!-- Baskets Area -->
+                <div class="baskets-container">
+                    <!-- True Cluster Basket -->
+                    <div class="basket" id="basket-true" ondragover="allowDrop(event)" ondrop="handleDrop(event, 'true')">
+                        <div class="basket-banner bg-blue">ส่งแผงผักป้าสมศรี (คำควบกล้ำแท้) 🥬</div>
+                        <div class="basket-icon">🧺</div>
+                        <p class="basket-label">ลากวางที่นี่ (ออกเสียงควบ ร, ล, ว)</p>
+                        <div class="basket-button-mobile" onclick="itemClickBasket('true')">จัดส่งแผงผักนี้ 📥</div>
+                    </div>
+
+                    <!-- False Cluster Basket -->
+                    <div class="basket" id="basket-false" ondragover="allowDrop(event)" ondrop="handleDrop(event, 'false')">
+                        <div class="basket-banner bg-orange">ส่งแผงผลไม้ลุงสมหมาย (คำควบกล้ำไม่แท้) 🍎</div>
+                        <div class="basket-icon">🧺</div>
+                        <p class="basket-label">ลากวางที่นี่ (ไม่ออกเสียง ร หรือ ทร -> ซ)</p>
+                        <div class="basket-button-mobile" onclick="itemClickBasket('false')">จัดส่งแผงผลไม้นี้ 📥</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Control Buttons -->
+            <div class="game-control">
+                <button class="btn btn-secondary" onclick="resetGame1()">เริ่มเรียงสินค้าใหม่ 🔄</button>
+                <button class="btn btn-primary" id="btn-next-game2" disabled onclick="switchScreen('game2-screen')">จัดสินค้าเสร็จแล้ว! ไปแผงยายประณีตกัน 📖</button>
+            </div>
+        </section>
+
+        <!-- SCREEN 4: GAME 2 SCREEN (STORY HUNTING GAME) -->
+        <section id="game2-screen" class="screen">
+            <div class="screen-header">
+                <h2>📖 ด่านที่ 2: ค้นหาคำควบกล้ำ แผงน้ำปั่นยายประณีต</h2>
+                <p>ยายประณีต แม่ค้าขายน้ำปั่นและขนมไทย ชวนเด็ก ๆ มาช่วยหาคำศัพท์ที่ซ่อนอยู่ในการผจญภัยของตลาดสดกันนะ!</p>
+                <div class="score-board">
+                    <div class="score-box">คะแนน: <span id="game2-score" class="score-num">0</span> คะแนน</div>
+                    <div class="progress-box">พบเจอแล้ว: <span id="game2-progress">0/10</span> คำ</div>
+                </div>
+            </div>
+
+            <!-- Story Board -->
+            <div class="story-board-container">
+                <div class="wood-board">
+                    <div class="wood-header">🪵 นิทานประดับร้าน: "ความป่วนในตลาดสดแสนทรุดโทรม"</div>
+                    <div class="story-content" id="story-content">
+                        <!-- Story paragraphs with clickable words will be loaded here by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legends showing which color indicates what -->
+            <div class="legend-container">
+                <span class="legend-item"><span class="color-dot true-dot"></span> สีเขียว = คำควบกล้ำแท้ (แผงผัก)</span>
+                <span class="legend-item"><span class="color-dot false-dot"></span> สีส้ม = คำควบกล้ำไม่แท้ (แผงผลไม้)</span>
+            </div>
+
+            <!-- Game Control Buttons -->
+            <div class="game-control">
+                <button class="btn btn-secondary" onclick="resetGame2()">เริ่มหาคำใหม่ 🔄</button>
+                <button class="btn btn-primary" id="btn-next-exit" disabled onclick="switchScreen('exit-screen')">ภารกิจเสร็จสิ้น! ไปขอรับใบเกียรติบัตร 🏆</button>
+            </div>
+        </section>
+
+        <!-- SCREEN 5: EXIT TICKET & CERTIFICATE -->
+        <section id="exit-screen" class="screen">
+            <div class="screen-header">
+                <h2>🏆 ตั๋วส่งของตรวจสอบความเข้าใจ (Exit Ticket)</h2>
+                <p>ตอบใบเสร็จคำถามทบทวนสั้น ๆ เพื่อรับใบประกาศเกียรติคุณผู้ช่วยคนเก่งแห่งตลาดสดคำควบกล้ำ!</p>
+            </div>
+
+            <div class="exit-grid">
+                <!-- Exit Ticket Form -->
+                <div class="exit-form-card">
+                    <h3>📝 บันทึกข้อมูลใบเสร็จตรวจสอบสินค้า</h3>
+                    <form id="exit-ticket-form" onsubmit="generateCertificate(event)">
+                        <div class="form-group">
+                            <label for="student-name">1. ชื่อ-นามสกุล ของนักเรียน (เพื่อพิมพ์ใบประกาศเกียรติคุณ):</label>
+                            <input type="text" id="student-name" required placeholder="เด็กหญิง/เด็กชาย แสนดี เรียนเก่ง" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label>2. คำว่า "สร้าง" (ร้านสร้างตึก) เป็นคำประเภทใด?</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="q1" value="true" required> คำควบกล้ำแท้
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="q1" value="false"> คำควบกล้ำไม่แท้
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>3. คำว่า "ขว้าง" (ขว้างมะนาว) เป็นคำประเภทใด?</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="q2" value="true" required> คำควบกล้ำแท้
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="q2" value="false"> คำควบกล้ำไม่แท้
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="q3-text">4. เขียนคำศัพท์ควบกล้ำแท้ที่เคยพบในตลาดสดมา 1 คำ:</label>
+                            <input type="text" id="q3-text" required placeholder="พิมพ์คำศัพท์ที่นี่..." class="form-input">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">ส่งตั๋วและรับใบประกาศเกียรติคุณ 🎓</button>
+                    </form>
+                </div>
+
+                <!-- Certificate Display Area -->
+                <div class="certificate-display-card">
+                    <h3>🏆 ใบประกาศเกียรติคุณผู้ช่วยคนเก่ง</h3>
+                    <p class="cert-desc">เมื่อตอบคำถาม Exit Ticket และกดส่ง น้องพร้อมผู้ดูแลตลาดจะลงตราประทับและมอบใบเกียรติคุณให้ทันที!</p>
+                    
+                    <div class="canvas-wrapper">
+                        <canvas id="cert-canvas" width="800" height="560"></canvas>
+                    </div>
+
+                    <div class="cert-actions">
+                        <button id="btn-download-cert" class="btn btn-success" disabled onclick="downloadCertificate()">ดาวน์โหลดใบเกียรติคุณ 📥</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 ออกแบบกิจกรรม Active Learning เรื่องคำควบกล้ำ ป.3 โดยใช้วงจร PDCA</p>
+        <p>พัฒนาโดย ทีมพัฒนาสื่อคอมพิวเตอร์ช่วยสอนภาษาไทย</p>
+    </footer>
+
+    <!-- Audio Synthesis Sound System Indicator -->
+    <div id="sound-indicator" class="sound-indicator">
+        🔊 ระบบเสียงเปิดใช้งานแล้ว
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+</html>
